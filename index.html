@@ -84,10 +84,6 @@ button{
   border-bottom:1px solid #eee;
 }
 
-.offer:last-child{
-  border-bottom:0;
-}
-
 .offer h3{
   font-size:16px;
 }
@@ -123,106 +119,199 @@ button{
 
 <div class="header">
 
-  <h1>💰 Refer & Earn Real Rewards</h1>
+<h1>💰 Refer & Earn Real Rewards</h1>
 
-  <p>
-    Invite friends and earn rewards from eligible offers
-  </p>
+<p>
+Invite friends and earn rewards from eligible offers
+</p>
 
 </div>
 
 <div class="container">
 
-  <div class="card reward">
+<div class="card reward">
 
-    <h3>Your Rewards</h3>
+<h3>Your Rewards</h3>
 
-    <h2>₹0</h2>
+<h2>₹0</h2>
 
-    <p>
-      Complete eligible referrals to earn rewards.
-    </p>
+<p>
+Complete eligible referrals to earn rewards.
+</p>
 
-  </div>
-
-
-  <div class="card">
-
-    <h2>🎁 How It Works</h2>
-
-    <br>
-
-    <p>1️⃣ Choose an eligible offer.</p>
-    <br>
-
-    <p>2️⃣ Share your referral link.</p>
-    <br>
-
-    <p>3️⃣ Your friend completes the required action.</p>
-    <br>
-
-    <p>4️⃣ Receive the reward according to the offer terms.</p>
-
-  </div>
+</div>
 
 
-  <div class="card">
+<div class="card">
 
-    <h2>🔥 Available Offers</h2>
+<h2>🎁 How It Works</h2>
 
-    <br>
+<br>
 
-    <div class="offer">
+<p>1️⃣ Choose an eligible offer.</p>
 
-      <div>
-        <h3>Offer 1</h3>
-        <p>Reward: As per offer</p>
-      </div>
+<br>
 
-      <button onclick="shareOffer()">
-        Share
-      </button>
+<p>2️⃣ Share your referral link.</p>
 
-    </div>
+<br>
 
+<p>3️⃣ Your friend completes the required action.</p>
 
-    <div class="offer">
+<br>
 
-      <div>
-        <h3>Offer 2</h3>
-        <p>Reward: As per offer</p>
-      </div>
+<p>4️⃣ Receive the reward according to the offer terms.</p>
 
-      <button onclick="shareOffer()">
-        Share
-      </button>
-
-    </div>
-
-  </div>
+</div>
 
 
-  <div class="card">
+<div class="card">
 
-    <h2>📲 Refer & Earn</h2>
+<h2>🔥 Available Offers</h2>
 
-    <br>
-
-    <p class="notice">
-      Referral rewards are subject to the individual offer's
-      eligibility, terms and successful completion requirements.
-      Rewards are not guaranteed merely for sharing a link.
-    </p>
-
-    <br>
-
-    <button onclick="shareWebsite()">
-      🔗 Share Website
-    </button>
-
-  </div>
+<br>
 
 
-  <div class="card">
+<div class="offer">
 
-    <
+<div>
+
+<h3>📱 Google Pay</h3>
+
+<p>Reward: ₹21*</p>
+
+</div>
+
+<button onclick="openGPay()">
+Join
+</button>
+
+</div>
+
+
+<div class="offer">
+
+<div>
+
+<h3>🎁 Offer 2</h3>
+
+<p>Coming Soon</p>
+
+</div>
+
+<button onclick="comingSoon()">
+View
+</button>
+
+</div>
+
+
+</div>
+
+
+<div class="card">
+
+<h2>📲 Refer & Earn</h2>
+
+<br>
+
+<p class="notice">
+
+Referral rewards are subject to the individual offer's
+eligibility, terms and successful completion requirements.
+Rewards are not guaranteed merely for sharing a link.
+
+</p>
+
+<br>
+
+<button onclick="shareWebsite()">
+
+🔗 Share Website
+
+</button>
+
+</div>
+
+
+<div class="card">
+
+<h2>⚠️ Important</h2>
+
+<br>
+
+<p class="notice">
+
+Never share your OTP, UPI PIN, ATM PIN,
+bank password or other confidential information.
+
+</p>
+
+<br>
+
+<p class="notice">
+
+*Google Pay reward is subject to Google Pay's
+eligibility and offer terms.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="footer">
+
+© 2026 Refer & Earn Real Rewards
+
+</div>
+
+
+<script>
+
+function openGPay(){
+
+window.location.href =
+"https://gpay.app.goo.gl/invite-hp8dw6n";
+
+}
+
+
+function comingSoon(){
+
+alert("This offer will be added soon.");
+
+}
+
+
+function shareWebsite(){
+
+const text =
+"💰 Refer & Earn Real Rewards\n\n" +
+"Check eligible referral offers here.";
+
+if(navigator.share){
+
+navigator.share({
+
+title:"Refer & Earn Real Rewards",
+
+text:text,
+
+url:window.location.href
+
+});
+
+}else{
+
+alert("Copy the website link and share it with your friends.");
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
